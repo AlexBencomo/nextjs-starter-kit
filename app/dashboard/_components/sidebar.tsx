@@ -55,7 +55,7 @@ export default function DashboardSideBar() {
             className="flex items-center font-semibold hover:cursor-pointer"
             href="/"
           >
-            <span>Nextjs Starter Kit</span>
+            <span>Alex Bencomo</span>
           </Link>
         </div>
 
