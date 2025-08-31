@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
+import ModeToggle from "./mode-toggle";
 
 export default function DashboardTopNav({ children }: { children: ReactNode }) {
   return (
@@ -73,6 +74,7 @@ export default function DashboardTopNav({ children }: { children: ReactNode }) {
           </SheetContent>
         </Dialog>
         <div className="flex justify-center items-center gap-2 ml-auto">
+          <ModeToggle />
           <UserProfile mini={true} />
         </div>
       </header>
