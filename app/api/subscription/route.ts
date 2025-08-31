@@ -1,10 +1,18 @@
-import { auth } from "@/lib/auth";
-import { getSubscriptionDetails } from "@/lib/subscription";
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
+// Note: Lazy import heavy modules inside the handler to avoid build-time evaluation
+// which can break when Next collects page data.
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
+    const [{ auth }, { getSubscriptionDetails }] = await Promise.all([
+      import("@/lib/auth"),
+      import("@/lib/subscription"),
+    ]);
+
     const result = await auth.api.getSession({
       headers: await headers(),
     });

@@ -1,10 +1,13 @@
-import { auth } from "@/lib/auth";
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+import type { auth as AuthType } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { SectionCards } from "./_components/section-cards";
 import { ChartAreaInteractive } from "./_components/chart-interactive";
 
 export default async function Dashboard() {
+  const { auth } = (await import("@/lib/auth")) as { auth: typeof AuthType };
   const result = await auth.api.getSession({
     headers: await headers(), // you need to pass the headers object.
   });
