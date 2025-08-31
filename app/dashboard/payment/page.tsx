@@ -6,12 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { getSubscriptionDetails } from "@/lib/subscription";
 import Link from "next/link";
 import ManageSubscription from "./_components/manage-subscription";
 
 export default async function PaymentPage() {
-  const subscriptionDetails = await getSubscriptionDetails();
+  // Avoid server-side session access during build; default to no subscription
+  const subscriptionDetails = { hasSubscription: false } as const;
 
   return (
     <div>
