@@ -98,6 +98,42 @@
     --shadow-2xl: 0px 16px 32px rgba(0, 0, 0, 0.1);
 }
 
+.dark {
+    /* Apple Dark Theme Colors */
+    --background: #000000;
+    --foreground: #f5f5f7;
+    --card: #0c0c0d;
+    --card-foreground: #f5f5f7;
+    --popover: #0c0c0d;
+    --popover-foreground: #f5f5f7;
+    --primary: #0a84ff; /* Apple Blue (Dark) */
+    --primary-foreground: #ffffff;
+    --secondary: #1d1d1f; /* Apple Dark Gray */
+    --secondary-foreground: #f5f5f7;
+    --muted: #1d1d1f;
+    --muted-foreground: #a1a1a6;
+    --accent: #0a84ff;
+    --accent-foreground: #0c0c0d;
+    --destructive: #ff453a; /* Apple Red (Dark) */
+    --destructive-foreground: #ffffff;
+    --border: #2c2c2e;
+    --input: #1c1c1e;
+    --ring: #0a84ff;
+    --chart-1: #0a84ff;
+    --chart-2: #30d158;
+    --chart-3: #ff9f0a;
+    --chart-4: #ffd60a;
+    --chart-5: #bf5af2;
+    --sidebar: #0c0c0d;
+    --sidebar-foreground: #e5e5e7;
+    --sidebar-primary: #0a84ff;
+    --sidebar-primary-foreground: #0c0c0d;
+    --sidebar-accent: #1d1d1f;
+    --sidebar-accent-foreground: #f5f5f7;
+    --sidebar-border: #2c2c2e;
+    --sidebar-ring: #0a84ff;
+}
+
 @layer base {
     * {
         @apply border-border outline-ring/50;
