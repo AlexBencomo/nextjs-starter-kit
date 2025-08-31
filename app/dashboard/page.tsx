@@ -3,8 +3,7 @@ export const runtime = "nodejs";
 import type { auth as AuthType } from "@/lib/auth";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { SectionCards } from "./_components/section-cards";
-import { ChartAreaInteractive } from "./_components/chart-interactive";
+import { OverviewTabs } from "./_components/overview-tabs";
 
 export default async function Dashboard() {
   const { auth } = (await import("@/lib/auth")) as { auth: typeof AuthType };
@@ -21,16 +20,15 @@ export default async function Dashboard() {
       <div className="w-full">
         <div className="flex flex-col items-start justify-center gap-2">
           <h1 className="text-3xl font-semibold tracking-tight">
-            Interactive Chart
+            Overview
           </h1>
           <p className="text-muted-foreground">
-            Interactive chart with data visualization and interactive elements.
+            Key metrics, charts, and your tasks in one place.
           </p>
         </div>
         <div className="@container/main flex flex-1 flex-col gap-2">
           <div className="flex flex-col gap-4 py-4 md:gap-6 md:py-6">
-            <SectionCards />
-            <ChartAreaInteractive />
+            <OverviewTabs />
           </div>
         </div>
       </div>
