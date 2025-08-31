@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 import FooterSection from "@/components/homepage/footer";
 import HeroSection from "@/components/homepage/hero-section";
 import Integrations from "@/components/homepage/integrations";

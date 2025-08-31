@@ -1,3 +1,6 @@
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 import { uploadImageAssets } from "@/lib/upload-image";
 import { NextRequest, NextResponse } from "next/server";
 

@@ -1,4 +1,3 @@
-import { auth } from "@/lib/auth";
 import { db } from "@/db/drizzle";
 import { subscription } from "@/db/schema";
 import { eq } from "drizzle-orm";
@@ -27,6 +26,7 @@ export type SubscriptionDetailsResult = {
 
 export async function getSubscriptionDetails(): Promise<SubscriptionDetailsResult> {
   try {
+    const { auth } = await import("@/lib/auth");
     const session = await auth.api.getSession({
       headers: await headers(),
     });
